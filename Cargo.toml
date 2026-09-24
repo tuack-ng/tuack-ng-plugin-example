@@ -11,7 +11,7 @@ description = "tuack-ng 示例插件"
 crate-type = ["cdylib"]
 
 [dependencies]
-tuack-plugin-sdk = "1.1.0-alpha.2"
+tuack-plugin-sdk = "2.0.0"
 
 [profile.release]
 opt-level = "s"
