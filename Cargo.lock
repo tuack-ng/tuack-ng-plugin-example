@@ -337,6 +337,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "serde_bytes"
+version = "0.11.19"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a5d440709e79d88e51ac01c4b72fc6cb7314017bb7da9eeff678aa94c10e3ea8"
+dependencies = [
+ "serde",
+ "serde_core",
+]
+
+[[package]]
 name = "serde_core"
 version = "1.0.229"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -437,6 +447,26 @@ dependencies = [
 ]
 
 [[package]]
+name = "thiserror"
+version = "2.0.21"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "09e52cb86a36cede5cb101bf8908837b3e4c6e5e59fe7fd85c23fb56200d189e"
+dependencies = [
+ "thiserror-impl",
+]
+
+[[package]]
+name = "thiserror-impl"
+version = "2.0.21"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fe5197923287db20a58125f0bc85c062f7f2c892de97b18c356f9efb14b28524"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 3.0.5",
+]
+
+[[package]]
 name = "toml_datetime"
 version = "1.1.1+spec-1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -468,15 +498,17 @@ dependencies = [
 
 [[package]]
 name = "tuack-lib"
-version = "1.1.0-alpha.2"
+version = "1.1.0-alpha.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "25f328089eadde64994e04846a7ac0d328c90d4bdbc0d26df96c7d40300452eb"
+checksum = "7c4662c5f84ca58473bde3b725ff49bb6ba82e3dafe0248a6aa09ee52c07c4b8"
 dependencies = [
  "anyhow",
  "bytesize",
  "indexmap",
  "serde",
+ "serde_bytes",
  "serde_many",
+ "thiserror",
  "tuack-ng-parser",
 ]
 
@@ -500,9 +532,9 @@ dependencies = [
 
 [[package]]
 name = "tuack-plugin-sdk"
-version = "1.1.0-alpha.2"
+version = "2.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "92d87fc79a6e39467c51724e58b6be1aadee309cdc54c3715784eeef5f98d6ce"
+checksum = "9109ccd43d9fad319628181b8b94b132d5afc14d006fbbc8253aba73315ca4c5"
 dependencies = [
  "extism-pdk",
  "log",
